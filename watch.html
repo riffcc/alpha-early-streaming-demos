@@ -1,8 +1,14 @@
 <!--
-Credits: https://www.w3docs.com/snippets/javascript/how-to-get-url-parameters.html
+Credits:
+- Fenders Slack
+- https://www.w3docs.com/snippets/javascript/how-to-get-url-parameters.html
+- https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+- https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
+
 With love to pb.
 -->
 <title>Riff.CC Watch</title>
+<body>
 <script>
 const queryString = window.location.search;
 console.log(queryString);
@@ -10,17 +16,30 @@ const urlParams = new URLSearchParams(queryString);
 const streamHash = urlParams.get('v')
 console.log(streamHash);
 
-    function newContent() {
-      document.open();
-      document.write("<source src=\"https://cdn.riff.cc/ipfs/lol.mp4\" type=\"video/mp4\">");
-      document.close();
-    }
+document.body.onload = addElement;
+
+function addElement () {
+
+  let newStream = document.createElement("source");
+
+  newStream.url = streamHash;
+
+  // add the text node to the newly created div
+  newStream.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentContent = document.getElementById("failureMessage");
+  document.body.insertBefore(newStream, currentContent);
+}
+
 </script>
+
 <p>Hello testers</p>
                 <video class="streaming_ipfs_size" controls>
 <!--                    <source src="https://cdn.riff.cc/ipfs/" type="video/mp4"> -->
-		<p onload="newContent();">
+		<p id="failureMessage">
 			<p>Failed to load, please contact help@riff.cc.</p>
 		</p>
                     <track label="English" kind="subtitles" srclang="en" src="SUBS" default>
                 </video>
+</body>
