@@ -7,35 +7,15 @@ Credits:
 
 With love to pb.
 -->
+
 <title>Riff.CC Watch</title>
 <body>
-<script>
-const queryString = window.location.search;
-console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
-const streamHash = urlParams.get('v')
-console.log(streamHash);
-
-document.body.onload = addElement;
-
-function addElement () {
-let newSource = document.createElement("source");
-
-newSource.url = 'https://cdn.riff.cc/ipfs/' + streamHash;
-
-var videoContainer = document.querySelector('video'); // Grab the video element
-videoContainer.appendChild(newSource);
-
-alert(newSource.url);}
-
-</script>
-
+<script src="js/watch.js"></script>
 <p>Hello testers</p>
                 <video class="streaming_ipfs_size" controls>
-<!--                    <source src="https://cdn.riff.cc/ipfs/" type="video/mp4"> -->
 		<p id="failureMessage">
 			<p>Failed to load, please contact help@riff.cc.</p>
 		</p>
-                    <track label="English" kind="subtitles" srclang="en" src="SUBS" default>
+                    <track label="English" kind="subtitles" srclang="en" src="index.html" default>
                 </video>
 </body>
