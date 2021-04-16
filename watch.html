@@ -19,18 +19,14 @@ console.log(streamHash);
 document.body.onload = addElement;
 
 function addElement () {
+var newSource = document.createElement("source");
 
-  let newStream = document.createElement("source");
+newSource.url = 'https://cdn.riff.cc/ipfs/' + streamHash;
 
-  newStream.url = streamHash;
+var videoContainer = document.querySelector('video'); // Grab the video element
+videoContainer.appendChild(newSource);
 
-  // add the text node to the newly created div
-  newStream.appendChild(newContent);
-
-  // add the newly created element and its content into the DOM
-  const currentContent = document.getElementById("failureMessage");
-  document.body.insertBefore(newStream, currentContent);
-}
+alert(newSource.url);}
 
 </script>
 
