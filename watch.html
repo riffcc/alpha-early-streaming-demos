@@ -1,0 +1,26 @@
+<!--
+Credits: https://www.w3docs.com/snippets/javascript/how-to-get-url-parameters.html
+With love to pb.
+-->
+<title>Riff.CC Watch</title>
+<script>
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const streamHash = urlParams.get('v')
+console.log(streamHash);
+
+    function newContent() {
+      document.open();
+      document.write("<source src=\"https://cdn.riff.cc/ipfs/lol.mp4\" type=\"video/mp4\">");
+      document.close();
+    }
+</script>
+<p>Hello testers</p>
+                <video class="streaming_ipfs_size" controls>
+<!--                    <source src="https://cdn.riff.cc/ipfs/" type="video/mp4"> -->
+		<p onload="newContent();">
+			<p>Failed to load, please contact help@riff.cc.</p>
+		</p>
+                    <track label="English" kind="subtitles" srclang="en" src="SUBS" default>
+                </video>
