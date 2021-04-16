@@ -12,7 +12,12 @@
     left: 0;
 }
 
+.myDIV:hover {
+  display: block;
+}
+
 .overlay {
+  display: none;
   position: absolute;
   vertical-align: top;
   text-align: left;
@@ -21,4 +26,5 @@
 
 i {
   color: white;
+  font-size: 6em;
 }
