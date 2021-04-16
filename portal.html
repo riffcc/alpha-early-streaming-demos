@@ -1,44 +1,65 @@
+<!--
+Credits:
+- Fenders Slack
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+With love to pb.
+-->
 <p>Welcome to Riff.CC Alpha</p>
+<head>
+<script src="https://kit.fontawesome.com/a449be11ec.js" crossorigin="anonymous"></script>
+</head>
 <style>
-nav {
-  float: left;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  min-height: 100%;
+}
+
+.sidebar {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+.menu li {
+  flex: 1;
+  padding: 4px 30px;
 }
 
 ul {
-  list-style-type: none;
   margin: 0;
-  padding: 0;
-  display: block;
-  width: 12px;
 }
 
-li {
-  text-align: center;
-}
-
-li a {
-  display: block;
-}
-
-.active {
-  background-color: black;
-  color: white;
-}
-
-body {
-  background-color: #2b2b2b;
-}
 </style>
-    <nav>
-        <h1>Main navigation</h1>
+<div class="flex-container">
+    <div class="sidebar">
+      <nav class="menu">
         <ul>
-            <li><a href="#" class="active">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
+            <li><a href="#" class="active"><i class="fas fa-star"></i></a></li>
+            <li><a href="#"><i class="fas fa-music"></i></a></li>
+            <li><a href="#"><i class="fas fa-film"></i></a></li>
+            <li><a href="#"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="#"><i class="fas fa-book-open"></i></a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="#"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
-    </nav>
-<section>
-<p><a href="watch.html?v=Qme2RndBEbp8YczpGTg4b8TjCGK7dxNrtYGdSu6AEEtqQG">RiP! A Remix Manifesto</a></p>
-<p><a href="watch.html?v=TEST">TEST</a></p>
-</section>
+      </nav>
+    </div>
+    <div class="featured">
+      <p><a href="watch.html?v=Qme2RndBEbp8YczpGTg4b8TjCGK7dxNrtYGdSu6AEEtqQG">RiP! A Remix Manifesto</a></p>
+      <p><a href="watch.html?v=TEST">TEST</a></p>
+    </div>
+</div>
