@@ -1,0 +1,49 @@
+img {
+  margin: 20px 20px 20px 20px;
+  width: 8em;
+  position: fixed;
+  top: 76%;
+  left: 0%;
+}
+
+i {
+  font-size: 170px;
+  color: white;
+  font-family: Ubuntu;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 80%);
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  font-size: 32px;
+  font-family: Ubuntu;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -650%);
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 50;
+}
+
+h1 {
+  font-size: 170px;
+  color: white;
+  font-family: Ubuntu;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -100%);
+}
+
+
